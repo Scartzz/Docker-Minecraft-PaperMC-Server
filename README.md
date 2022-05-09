@@ -17,6 +17,7 @@ docker pull marctv/minecraft-papermc-server
 docker run \
   --rm \
   --name mcserver \
+  -e MINMEMORY='256M' \
   -e MEMORYSIZE='1G' \
   -v /homes/joe/mcserver:/data:rw \
   -p 25565:25565 \
@@ -88,6 +89,10 @@ make help      # prints a help message
 
 ## Environment variable
 
+MINMEMORY = 256M
+
+Thats the initial memory the JVM inside the container will use. The amount specified in this value will always be reserved by the container.
+
 MEMORYSIZE = 1G
 
 Not more than 70% of your RAM for your Container! This is important! This is the RAM your Minecraft Server will use within the container WITHOUT the operating system.
@@ -96,7 +101,7 @@ TZ = Europe/Berlin
 
 Sets the timezone for the container. A list of valid values can be found on wikipedia: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-## Tutorial
+## Tutorial (for original Repo)
 
 Tutorial (german) https://marc.tv/anleitung-stabiler-minecraft-server-synology-nas/
 
