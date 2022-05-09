@@ -44,6 +44,10 @@ VOLUME "/data"
 EXPOSE 25565/tcp
 EXPOSE 25565/udp
 
+# Set min memory size
+ARG min_memory_size=256M
+ENV MINMEMORY=$min_memory_size
+
 # Set memory size
 ARG memory_size=3G
 ENV MEMORYSIZE=$memory_size
