@@ -4,13 +4,13 @@ Docker Minecraft PaperMC server for 1.18, 1.17 and 1.16 (deprecated!)
 
 # Minecraft 1.18 
 
-	docker pull marctv/minecraft-papermc-server:1.18
+	docker pull scartzz/minecraft-papermc-server:master
 
 See https://github.com/mtoensing/Docker-Minecraft-PaperMC-Server/issues/33 for more information.
 
 ## Quick Start
 ```sh
-docker pull marctv/minecraft-papermc-server
+docker pull scartzz/minecraft-papermc-server:master
 ```
 
 ```sh
@@ -21,7 +21,7 @@ docker run \
   -e MEMORYSIZE='1G' \
   -v /homes/joe/mcserver:/data:rw \
   -p 25565:25565 \
--i marctv/minecraft-papermc-server:latest
+-i scartzz/minecraft-papermc-server:master
 ```
 ```sh
 docker attach mcserver
@@ -42,7 +42,7 @@ You can use volumes to store data persistantly, for example:
 docker run --rm \
 	-p 25565:25565 \
 	-v <full path to folder where you want to store the server files>:/data:rw \
-	marctv/minecraft-papermc-server:latest
+	scartzz/minecraft-papermc-server:master
  ```
 
 ## Run as non-root user
